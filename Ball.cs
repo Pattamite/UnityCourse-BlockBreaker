@@ -21,7 +21,7 @@ public class Ball : MonoBehaviour
 		if(!started)this.transform.position = paddle.transform.position + paddleToBallVector;
 		
 		// Waiting for a mouse press to launch.
-		if (Input.GetMouseButtonDown(0))
+		if (Input.GetMouseButtonDown(0) && !started)
 		{
 			print ("Mouse clicked");
 			started = true;

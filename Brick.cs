@@ -5,12 +5,14 @@ public class Brick : MonoBehaviour
 {
 
 	public int maxHit;
+	private LevelManager levelManager;
 	private int timesHit;
 	
 	// Use this for initialization
 	
 	void Start () 
 	{
+		levelManager = GameObject.FindObjectOfType<LevelManager>();
 		timesHit = 0;
 	}
 	
@@ -23,5 +25,7 @@ public class Brick : MonoBehaviour
 	void OnCollisionEnter2D (Collision2D col)
 	{
 		timesHit++;
+		if(timesHit >= maxHit) Destroy(gameObject);
+		
 	}
 }
