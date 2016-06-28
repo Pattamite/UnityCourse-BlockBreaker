@@ -9,6 +9,12 @@ public class LevelManager : MonoBehaviour
 		Application.LoadLevel(name);
 	}
 	
+	public void LoadNextLevel()
+	{
+		Debug.Log ("Next level load requested for: " + Application.loadedLevel +1);
+		Application.LoadLevel(Application.loadedLevel +1);
+	}
+	
 	public void QuitRequest()
 	{
 		Debug.Log ("Quit Requested");
