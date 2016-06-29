@@ -12,7 +12,9 @@ public class LoseCollider : MonoBehaviour
 	
 	void OnTriggerEnter2D (Collider2D trigger)
 	{
-		print("Trigger");
+		print("Lose Collider Triggered");
+		Brick.breakableCount=0;
+		print("Reset BreakableCount");
 		levelManager.LoadLevel("Lose");
 	}
 	
