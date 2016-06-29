@@ -23,7 +23,7 @@ public class Paddle : MonoBehaviour
 	{
 		Vector3 paddlePos = new Vector3 (0.5f, this.transform.position.y, this.transform.position.z);
 		Vector3 ballPos = ball.transform.position;
-		paddlePos.x = Mathf.Clamp(ballPos.x, 0.5f , 15.5f);
+		paddlePos.x = Mathf.Clamp(ballPos.x, 1f , 15f);
 		
 		this.transform.position = paddlePos;
 	}
@@ -32,7 +32,7 @@ public class Paddle : MonoBehaviour
 	{
 		Vector3 paddlePos = new Vector3 (0.5f, this.transform.position.y, this.transform.position.z);
 		float mouseX = Input.mousePosition.x / Screen.width * 16;
-		paddlePos.x = Mathf.Clamp(mouseX, 0.5f , 15.5f);
+		paddlePos.x = Mathf.Clamp(mouseX, 1f , 15f);
 		
 		this.transform.position = paddlePos;
 	}
